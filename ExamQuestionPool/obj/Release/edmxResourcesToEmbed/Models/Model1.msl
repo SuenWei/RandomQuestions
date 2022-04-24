@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbQuestionPoolModelStoreContainer" CdmEntityContainer="dbQuestionPoolEntities">
+    <EntitySetMapping Name="tblQuestionPool">
+      <EntityTypeMapping TypeName="dbQuestionPoolModel.tblQuestionPool">
+        <MappingFragment StoreEntitySet="tblQuestionPool">
+          <ScalarProperty Name="fQuestionID" ColumnName="fQuestionID" />
+          <ScalarProperty Name="fQuestion" ColumnName="fQuestion" />
+          <ScalarProperty Name="fChoice1" ColumnName="fChoice1" />
+          <ScalarProperty Name="fChoice2" ColumnName="fChoice2" />
+          <ScalarProperty Name="fChoice3" ColumnName="fChoice3" />
+          <ScalarProperty Name="fChoice4" ColumnName="fChoice4" />
+          <ScalarProperty Name="fAnswer" ColumnName="fAnswer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

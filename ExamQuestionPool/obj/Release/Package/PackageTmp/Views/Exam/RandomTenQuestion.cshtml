@@ -1,0 +1,80 @@
+﻿@model IEnumerable<ExamQuestionPool.Models.tblQuestionPool>
+
+@{
+    ViewBag.Title = "RandomTenQuestion";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>題庫隨機亂數抽出10個題目 Random</h2>
+@*<h4>題庫總題數 @ViewBag.AllQuestionsCount</h4>*@
+<div>
+    @Html.ActionLink("重新抽題", "RandomTenQuestion")
+</div>
+<br />
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.fQuestionID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fQuestion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fChoice1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fChoice2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fChoice3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fChoice4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fAnswer)
+        </th>
+        <th></th>
+    </tr>
+
+    @{ int count = 0; }
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @*@Html.DisplayFor(modelItem => item.fQuestionID)*@
+                @(count+=1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fQuestion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fChoice1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fChoice2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fChoice3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fChoice4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fAnswer)
+            </td>
+            @*<td>
+                    <a href="@Url.Action("EditQuestion")?QuestionID=@item.fQuestionID">修改題目</a> |
+                    <a href="@Url.Action("DeleteQuestion")?QuestionID=@item.fQuestionID"
+                       onclick="return confirm('  確定要 Delete 題目編號 @count 嗎 ?  ');">刪除題目</a>
+
+                </td>*@
+        </tr>
+    }
+
+</table>
+
+
+<div>
+    @Html.ActionLink("返回題庫", "QuestionPool")
+</div>

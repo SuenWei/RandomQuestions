@@ -1,0 +1,52 @@
+﻿@model ExamQuestionPool.Models.tblQuestionPool
+
+@{
+    ViewBag.Title = "RandomQuestion";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>題庫隨機亂數抽出10個題目</h2>
+<h2>題庫總題數 @ViewBag.AllQuestionsCount</h2>
+<br />
+
+<h2>@ViewBag.Question1</h2>
+<h2>@ViewBag.Question2</h2>
+<h2>@ViewBag.Question3</h2>
+<h2>@ViewBag.Question4</h2>
+<h2>@ViewBag.Question5</h2>
+<h2>@ViewBag.Question6</h2>
+<h2>@ViewBag.Question7</h2>
+<h2>@ViewBag.Question8</h2>
+<h2>@ViewBag.Question9</h2>
+<h2>@ViewBag.Question10</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.fQuestionID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fQuestion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fChoice1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fChoice2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fChoice3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fChoice4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fAnswer)
+        </th>
+        <th></th>
+    </tr>
+
+
+
+</table>
+

@@ -1,0 +1,56 @@
+﻿@model IEnumerable<ExamQuestionPool.Models.tblQuestionPool>
+
+<br />
+<br />
+<br />
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.fQuestionID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fQuestion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fChoice1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fChoice2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fChoice3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fChoice4)
+        </th>
+        <th>
+            答案
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.fQuestionID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.fQuestion)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.fChoice1)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.fChoice2)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.fChoice3)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.fChoice4)
+    </td>
+    <td>    
+    </td>
+</tr>
+}
+
+</table>

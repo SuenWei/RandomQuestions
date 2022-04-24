@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "題庫隨機出題";
+}
+
+<div class="jumbotron">
+    <h2>題庫隨機出題 線上平台 </h2>
+    <p class="lead">Random Questions</p>
+    @*<p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
+</div>
+
+
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>瀏覽題庫</h2>
+        <p>
+            讀取資料庫內所有的題目、選項、和正確答案。
+            並可以管理題庫，執行新增題目、編輯題目、和刪除題目功能。
+        </p>
+        <p><a class="btn btn-default" href="@Url.Action("QuestionPool")">GoGo &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>新增題目</h2>
+        <p>
+            新增題目、題目選項、以及正確答案至題庫內。
+            若輸入框皆未填寫，會亂數模擬產生數學平方題目。
+        </p>
+        <p><a class="btn btn-default" href="@Url.Action("CreateQuestion")">GoGo &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>隨機出題</h2>
+        <p>從題庫中隨機亂數抽出10道選擇題，包含題目編號、題目描述、以及選項(A)、(B)、(C)、(D)，並輸出考卷內容</p>
+        <p><a class="btn btn-default" href="@Url.Action("RandomTenQuestion")">GoGo &raquo;</a></p>
+    </div>
+</div>
